@@ -12,6 +12,7 @@ var apiAccount = require('./app/routers/api/account')
 var apiUser = require('./app/routers/api/user')
 
 //Set static folder
+app.use(express.static("./app/public"))
 app.use(express.static("./app/views"))
 
 //Set views
@@ -27,6 +28,9 @@ app.use(bodyParser.json())
 //API ROUTES
 app.use('/api/account', apiAccount)
 app.use('/api/user', apiUser)
+app.use('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'app/views/login.html'))
+})
 
 //start the server
 app.listen(port)
