@@ -1,0 +1,383 @@
+{
+	"id": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+	"name": "DemoAcc",
+	"description": "",
+	"order": [
+		"324be4df-80b5-6ea8-62fa-3328f573926d",
+		"e7523347-c223-ab0d-5802-e22ec1c19030",
+		"a15b6737-5f14-2745-3582-85a2f8288db3",
+		"62f691e4-60fb-217c-ab8e-f45cdca390a5",
+		"9608b49e-c8cf-724b-0760-65fd7bee143a",
+		"0801cd6a-631d-93d6-87a9-663638ca2375",
+		"8270a895-07be-af23-6028-26cbdefd9cc2",
+		"ef2b19ee-1dfd-dbef-421c-9c86d83d33ce"
+	],
+	"folders": [],
+	"timestamp": 1499915776921,
+	"owner": "1797606",
+	"public": false,
+	"requests": [
+		{
+			"id": "0801cd6a-631d-93d6-87a9-663638ca2375",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/api/user/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "Van Xop",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "abc@abc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phoneNumber",
+					"value": "0123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499931286831,
+			"name": "http://localhost:8080/api/user/",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "324be4df-80b5-6ea8-62fa-3328f573926d",
+			"headers": "username: Xop\npassword: 123\n",
+			"headerData": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/account",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499915923681,
+			"name": "http://localhost:8080/api/account",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "62f691e4-60fb-217c-ab8e-f45cdca390a5",
+			"headers": "username: Xop\npassword: 123\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/account/authen",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499931485335,
+			"name": "http://localhost:8080/api/account/authen",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "8270a895-07be-af23-6028-26cbdefd9cc2",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/api/user/update/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "Van Xop",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "abc@abc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phoneNumber",
+					"value": "0123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499931510551,
+			"name": "http://localhost:8080/api/account",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "9608b49e-c8cf-724b-0760-65fd7bee143a",
+			"headers": "username: Xop\npassword: 123\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/user/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "username",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499931492419,
+			"name": "http://localhost:8080/api/user/",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "a15b6737-5f14-2745-3582-85a2f8288db3",
+			"headers": "username: Xop\npassword: 123\n",
+			"headerData": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/account/0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499922439134,
+			"name": "http://localhost:8080/api/account/1",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "e7523347-c223-ab0d-5802-e22ec1c19030",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/account",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499916077995,
+			"name": "http://localhost:8080/api/account",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		},
+		{
+			"id": "ef2b19ee-1dfd-dbef-421c-9c86d83d33ce",
+			"headers": "username: Xop\npassword: 123\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "username",
+					"value": "Xop",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/user/delete/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "username",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499931614576,
+			"name": "http://localhost:8080/api/user/delete/2",
+			"description": "",
+			"collectionId": "b8056df9-b876-188d-5f50-5a58f6747c9b",
+			"responses": []
+		}
+	]
+}

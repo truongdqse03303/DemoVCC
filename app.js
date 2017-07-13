@@ -9,6 +9,7 @@ var port = process.env.port || 8080
 
 // routes
 var apiAccount = require('./app/routers/api/account')
+var apiUser = require('./app/routers/api/user')
 
 //Set static folder
 app.use(express.static("./app/views"))
@@ -25,6 +26,7 @@ app.use(bodyParser.json())
 
 //API ROUTES
 app.use('/api/account', apiAccount)
+app.use('/api/user', apiUser)
 
 //start the server
 app.listen(port)
