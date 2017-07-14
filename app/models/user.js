@@ -5,7 +5,7 @@ user = [{
     phoneNumber: '01674776750'
 },{
     id: '1',
-    username: 'vccorp Truong',
+    name: 'vccorp Truong',
     email: 'truongdaoquang@channelvn.net',
     phoneNumber: '09865498423'
 }]

@@ -33,14 +33,23 @@ apiRoutes.post('/', function (req, res) {
 
 //update new user
 apiRoutes.post('/update/:id', function (req, res) {
-    var updateUser = req.body
     var id = req.params.id
+    var updateUser = {
+        id: id,
+        name: req.body.name,
+        email: req.body.email,
+        phoneNumber: req.body.phoneNumber
+    }
     user[id] = updateUser
+    console.log(updateUser)
+    console.log(user)
     return res.json(user[id])
 })
 
 //update new user
 apiRoutes.get('/delete/:id', function (req, res) {
+    console.log(111111111)
+    console.log(req.params.id)
     var id = req.params.id;
     user.splice(id, 1)
     return res.json(true);

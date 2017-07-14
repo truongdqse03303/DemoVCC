@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".btn-login").click(function () {
         var obj = {
             username: $('#username').val(),
@@ -14,23 +15,13 @@ $(document).ready(function () {
                 if (res.success === true) {
                     alert('Login success')
                     setTimeout(function () {
-                        document.location.href = '/admin'
+                        document.location.href = '/table.html'
                     }, 500)
-                } else alert('Login false')
+                } else alert('Login fail')
             }
         })
     });
 
-    $.ajax({
-        type: 'GET',
-        url: '/api/user/',
-        dataType: 'json',
-        contentType: 'application/x-www-form-urlencoded',
-        success: function (res) {
-            var arr = res
-            if (!res === null) {
-                $('.table.memberList').append('<tr> <td>' + Arr[i].name + '</td> <td>' + Arr[i].email + '</td> <td>' + Arr[i].phoneNumber + '</td> <td><a href="#">Add</a></td> <td><a href="#">Edit</a></td> <td><a href="#">Remove</a></td> </tr>')
-            }
-        }
-    })
+
+
 })

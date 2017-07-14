@@ -5,30 +5,75 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Demo login manage User</title>
+    <title>Demo Table VCC</title>
 </head>
 
 <body>
     <div class="table-overflow">
-        <table class="table">
+        <table id="example" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>Họ Tên</th>
-                    <th>Trạng thái</th>
+                    <th>Name</th>
                     <th>Email</th>
+                    <th>Phone Number</th>
                     <th></th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody class="table memberList">
-                
             </tbody>
         </table>
     </div>
 
+
+
+    <div class="addBody" >
+        <form role="form" id="signupForm">
+            <div class="form-group">
+                <input type="text" id="addName" placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" id="addPhoneNumber" placeholder="Phone Number" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" id="addEmail" placeholder="Địa chỉ email" class="form-control">
+            </div>
+            <div class="form-group">
+                <div class="btn-group-justified">
+                    <button class="btn-add">Add user</button>
+                </div>
+            </div>
+            <br>
+        </form>
+    </div>
+
+    <div class="editBody" >
+        <form role="form" id="signupForm">
+            <div class="form-group">
+                <input type="text" id="editId" placeholder="Name" class="form-control" hidden="true">
+            </div>
+            <div class="form-group">
+                <input type="text" id="editName" placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" id="editPhoneNumber" placeholder="Phone Number" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" id="editEmail" placeholder="Địa chỉ email" class="form-control">
+            </div>
+            <div class="form-group">
+                <div class="btn-group-justified">
+                    <button class="btn-edit">Edit User</button>
+                </div>
+            </div>
+            <br>
+        </form>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="login.js" type="text/javascript"></script>
+    <script src="js/table.js" type="text/javascript"></script>
 </body>
 
 </html>
