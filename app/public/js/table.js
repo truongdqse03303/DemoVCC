@@ -12,7 +12,7 @@ $(document).ready(function () {
             console.log(res)
             if (res !== null) {
                 jQuery.each(Arr, function (i, val) {
-                    $('.table.memberList').append('<tr> <td>' + Arr[i].name + '</td> <td>' + Arr[i].email + '</td> <td>' + Arr[i].phoneNumber + '</td> <td> <button class="btn-add' + i + '">Add</button> </td> <td> <button class="btn-edit' + i + '">Edit</button> </td> <td> <button class="btn-remove' + i + '">Remove</button> </td></tr>')
+                    $('.table.memberList').append('<tr> <td>' + Arr[i].name + '</td> <td>' + Arr[i].email + '</td> <td>' + Arr[i].phoneNumber + '</td> <td id="action"> <button class="btn-add' + i + '">Add</button> <button class="btn-edit' + i + '">Edit</button> <button class="btn-remove' + i + '">Remove</button> </td></tr>')
 
                     $('.btn-add' + i + '').click(function () {
                         $('.addBody').show()
@@ -20,6 +20,10 @@ $(document).ready(function () {
 
                     $('.btn-edit' + i + '').click(function () {
                         $('.editBody').show()
+                        $('#editId').val("")
+                        $('#editName').val("")
+                        $('#editEmail').val("")
+                        $('#editPhoneNumber').val("")   
                         $('#editId').val($('#editId').val() + Arr[i].id)
                         $('#editName').val($('#editName').val() + Arr[i].name)
                         $('#editEmail').val($('#editEmail').val() + Arr[i].email)

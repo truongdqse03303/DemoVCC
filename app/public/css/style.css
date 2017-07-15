@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+form {
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+td#action {
+    text-align: center;
+}

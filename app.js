@@ -15,15 +15,11 @@ var apiUser = require('./app/routers/api/user')
 app.use(express.static("./app/public"))
 app.use(express.static("./app/views"))
 
-//Set views
-app.set('views', path.join(__dirname, './app/views'))
-
 // get info from POST and/or URL parameters
 app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(bodyParser.json())
-
 
 //API ROUTES
 app.use('/api/account', apiAccount)
