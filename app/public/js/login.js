@@ -14,6 +14,7 @@ $(document).ready(function () {
             success: function (res) {
                 if (res.success === true) {
                     alert('Login success')
+                    document.cookie = 'token=' + res.token
                     setTimeout(function () {
                         document.location.href = '/table.html'
                     }, 500)

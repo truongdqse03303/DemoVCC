@@ -2,6 +2,7 @@ var express = require("express")
 var app = express()
 var bodyParser = require('body-parser')
 var path = require('path')
+var cookieParser = require('cookie-parser')
 
 
 //Configuration 
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(bodyParser.json())
+app.use(cookieParser())
 
 //API ROUTES
 app.use('/api/account', apiAccount)

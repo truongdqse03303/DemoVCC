@@ -1,6 +1,10 @@
 var express = require('express')
 var apiRoutes = express.Router()
 var acc = require('../../models/account')
+var jwt = require('jsonwebtoken')
+
+
+
 
 //get all acc
 apiRoutes.get('/', function (req, res) {
@@ -32,20 +36,37 @@ apiRoutes.post('/', function (req, res) {
 // authen
 apiRoutes.post('/authen', function (req, res) {
     var results = 0
-    for (i = 0; i <= accounts.length-1; i++) {
+    var resAcc
+    for (i = 0; i <= accounts.length - 1; i++) {
         if (accounts[i].username == req.body.username && accounts[i].password == req.body.password) {
             results += 1;
+            resAcc = accounts[i]
         }
     }
-    if(results > 0){
-        return res.json({
-            success: true,
-            msg: 'Login success'
-        })
+    if (results > 0) {
+        getAuthToken(res, resAcc)
     } else return res.json({
-            success: false,
-            msg: 'Login false'
-        })
+        success: false,
+        msg: 'Login false'
+    })
+
 })
+
+
+
+
+var getAuthToken = function (res, acc) {
+    setTimeout(function () {
+        var token = jwt.sign(acc, 'Vcc demo', {
+            expiresIn: 86400000 // expires in 24 hours https://github.com/zeit/ms#examples
+        })
+        // return the information including token as JSON
+        res.json({
+            success: true,
+            msg: 'Enjoy your token!',
+            token: token
+        })
+    }, 100)
+}
 
 module.exports = apiRoutes

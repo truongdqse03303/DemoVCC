@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo Login VCC</title>
+
+    <!--Pulling Awesome Font -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrap">
-        <div id="regbar">
-            <div class="login">
-                <div class="arrow-up"></div>
-                <div class="formholder">
-                    <div class="randompad">
-                        <fieldset>
-                            <label name="email">Email</label>
-                            <input type="text" id="username" />
-                            <label name="password">Password</label>
-                            <input type="password" id="password" />
-                            <input type="submit" class="btn-login" value="Login" />
-                        </fieldset>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-3">
+                <div class="form-login">
+                    <h4>Demo VCC Login</h4>
+                    <input type="text" id="username" class="form-control input-sm chat-input" placeholder="username" /><br/>
+                    <input type="password" id="password" class="form-control input-sm chat-input" placeholder="password" /><br/>
+                    <div class="wrapper">
+                        <span class="group-btn">     
+                            <button class="btn btn-primary btn-md btn-login">login</button>
+                        </span>
                     </div>
                 </div>
             </div>

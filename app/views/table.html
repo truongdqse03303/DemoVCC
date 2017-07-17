@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Demo Table VCC</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="table-overflow">
-        <table id="example" class="display" cellspacing="0" width="100%">
+<body style="text-align:center">
+    <div class="table-overflow col-md-6">
+        <table id="example" class="table table-bordred table-striped display" cellspacing="0">
             <thead>
-                <tr>
+                <tr id="">
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
@@ -24,52 +25,74 @@
             <tbody class="table memberList">
             </tbody>
         </table>
-    </div>
-
-
-
-    <div class="addBody">
-        <form role="form" id="signupForm">
-            <div class="form-group">
-                <input type="text" id="addName" placeholder="Name" class="form-control">
+        <div>
+            <div class="com-md-6">
+                <label>User are being logged in: <input id="me" disabled></input></label>
             </div>
-            <div class="form-group">
-                <input type="text" id="addPhoneNumber" placeholder="Phone Number" class="form-control">
-            </div>
-            <div class="form-group">
-                <input type="text" id="addEmail" placeholder="Địa chỉ email" class="form-control">
-            </div>
-            <div class="form-group">
-                <div class="btn-group-justified">
-                    <button class="btn-add">Add user</button>
-                </div>
-            </div>
-            <br>
-        </form>
+        <button type="button com-md-6" class="btn btn-default btn-sm btn-logout">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+        </div>
     </div>
 
     <div class="editBody">
-        <form role="form" id="signupForm">
-            <div class="form-group">
-                <input type="text" id="editId" placeholder="Name" class="form-control" hidden="true">
-            </div>
-            <div class="form-group">
-                <input type="text" id="editName" placeholder="Name" class="form-control">
-            </div>
-            <div class="form-group">
-                <input type="text" id="editPhoneNumber" placeholder="Phone Number" class="form-control">
-            </div>
-            <div class="form-group">
-                <input type="text" id="editEmail" placeholder="Địa chỉ email" class="form-control">
-            </div>
-            <div class="form-group">
-                <div class="btn-group-justified">
-                    <button class="btn-edit">Edit User</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close"><span class="glyphicon glyphicon-remove" ></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" id="editId" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="editName" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="editPhoneNumber" placeholder="Phone Number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="editEmail" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-warning btn-lg btn-edit" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Edit User</button>
                 </div>
             </div>
-            <br>
-        </form>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
+
+    <div class="addBody">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close"><span class="glyphicon glyphicon-remove" ></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Add User</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" id="addName" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="addPhoneNumber" placeholder="Phone Number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="addEmail" placeholder="Địa chỉ email" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-warning btn-lg btn-add" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Add User</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
