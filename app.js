@@ -4,6 +4,11 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var cookieParser = require('cookie-parser')
 
+var logger = require('./logger.js');
+
+logger.info('Hello world');
+logger.warn('Warning message');
+logger.debug('Debugging info');
 
 //Configuration 
 var port = process.env.port || 8080
