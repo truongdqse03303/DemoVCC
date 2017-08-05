@@ -3,13 +3,18 @@ var app = express()
 var bodyParser = require('body-parser')
 var path = require('path')
 var cookieParser = require('cookie-parser')
+var fs = require('fs');
 
-var logger = require('./logger.js');
+var date = new Date();
+var content = date.toISOString() + " GET " + "200" + "\n"
+console.log(content)
 
-logger.info('Hello world');
-logger.warn('Warning message');
-logger.debug('Debugging info');
-
+fs.appendFile("/Users/VCCORP/Documents/Demo/log/test", content, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The file was saved!");
+}); 
 //Configuration 
 var port = process.env.port || 8080
 
