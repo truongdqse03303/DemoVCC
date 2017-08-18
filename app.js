@@ -5,16 +5,40 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var fs = require('fs');
 
-var date = new Date();
-var content = date.toISOString() + " GET " + "200" + "\n"
-console.log(content)
+var rand = 0;
 
-fs.appendFile("/Users/VCCORP/Documents/Demo/log/test", content, function(err) {
-    if(err) {
+setInterval(function () {
+  var rand = Math.floor(Math.random() * (1000 - 150) + 150);
+
+  setTimeout(function () {
+    var content = (new Date()).toISOString() + " GET " + "200 " + rand + "ms \n";
+    console.log(content);
+
+    fs.appendFile("/Users/VCCORP/Documents/Demo/log/test.log", content, function (err) {
+      if (err) {
         return console.log(err);
-    }
-    console.log("The file was saved!");
-}); 
+      }
+      console.log("The file was saved!");
+    });
+
+  }, rand);
+}, 150);
+
+
+// var date = new Date();
+
+// setInterval(function(){   
+//     var content = date.toISOString() + " GET " + "200 " +  Math.floor((Math.random()*100)+1) + "\n"
+
+//     fs.appendFile("/Users/VCCORP/Documents/Demo/log/test.log", content, function(err) {
+//         if(err) {
+//             return console.log(err);
+//         }
+//         console.log("The file was saved!");
+//     });
+
+//  }, 1000);
+
 //Configuration 
 var port = process.env.port || 8080
 
